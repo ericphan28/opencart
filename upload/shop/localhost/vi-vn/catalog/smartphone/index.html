@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Điện thoại & PDA</title>
+  <base href="http://localhost:7777/opencart/upload/"/>
+      <meta name="description" content="Điện thoại di động, smartphone, PDA chính hãng"/>
+        <meta name="keywords" content="điện thoại, smartphone, pda, mobile"/>
+    <link href="catalog/view/stylesheet/stylesheet.css" type="text/css" rel="stylesheet"/>
+  <script src="catalog/view/javascript/jquery/jquery-3.7.1.min.js" type="text/javascript"></script>
+  <script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+      <link rel="icon" href="http://localhost:7777/opencart/upload/image/catalog/opencart.ico" type="image/png">
+            <link href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24" rel="canonical"/>
+    </head>
+<body class="w-100 h-100">
+  <div id="container" class="d-flex flex-column min-vh-100">
+    <div id="alert"></div>
+    <nav id="top">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <ul class="list-inline">
+              <li class="list-inline-item me-3"></li>
+              <li class="list-inline-item">  <form id="form-language" action="http://localhost:7777/opencart/upload/index.php?route=common/language.save&amp;language=vi-vn" method="post" data-oc-toggle="ajax">
+    <div class="dropdown"><a href="#" data-bs-toggle="dropdown" class="dropdown-toggle"><img src="http://localhost:7777/opencart/upload/catalog/language/vi-vn/vi-vn.png" alt="Vi?t Nam" title="Vi?t Nam"> <span class="d-none d-md-inline">Ngôn ngữ</span> <i class="fa-solid fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+                  <li><a href="en-gb" class="dropdown-item"><img src="http://localhost:7777/opencart/upload/catalog/language/en-gb/en-gb.png" alt="English" title="English"/> English</a></li>
+                  <li><a href="vi-vn" class="dropdown-item"><img src="http://localhost:7777/opencart/upload/catalog/language/vi-vn/vi-vn.png" alt="Vi?t Nam" title="Vi?t Nam"/> Vi?t Nam</a></li>
+              </ul>
+    </div>
+    <input type="hidden" name="code" value="vi-vn" id="input-language"/>
+    <input type="hidden" name="redirect" value="http://localhost:7777/opencart/upload/index.php?route=product/category&path=24"/>
+  </form>
+</li>
+            </ul>
+          </div>
+          <div class="col text-end">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="http://localhost:7777/opencart/upload/index.php?route=information/contact&amp;language=vi-vn"><i class="fa-solid fa-phone"></i> <span class="d-none d-lg-inline">123456789</span></a></li>
+              <li class="list-inline-item">
+                <div class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i> <span class="d-none d-lg-inline">Tài khoản</span> <i class="fa-solid fa-caret-down"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                                          <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/register&amp;language=vi-vn" class="dropdown-item">Đăng ký</a></li>
+                      <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/login&amp;language=vi-vn" class="dropdown-item">Đăng nhập</a></li>
+                                      </ul>
+                </div>
+              </li>
+              <li class="list-inline-item"><a href="http://localhost:7777/opencart/upload/index.php?route=account/wishlist&amp;language=vi-vn" id="wishlist-total" title="Yêu thích (0)"><i class="fa-solid fa-heart"></i> <span class="d-none d-lg-inline">Yêu thích (0)</span></a></li>
+              <li class="list-inline-item"><a href="http://localhost:7777/opencart/upload/index.php?route=checkout/cart&amp;language=vi-vn" title="Giỏ hàng"><i class="fa-solid fa-cart-shopping"></i> <span class="d-none d-lg-inline">Giỏ hàng</span></a></li>
+              <li class="list-inline-item"><a href="http://localhost:7777/opencart/upload/index.php?route=checkout/checkout&amp;language=vi-vn" title="Thanh toán"><i class="fa-solid fa-share"></i> <span class="d-none d-lg-inline">Thanh toán</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-lg-4">
+            <div id="logo">
+                              <a href="http://localhost:7777/opencart/upload/index.php?route=common/home&amp;language=vi-vn"><img src="http://localhost:7777/opencart/upload/image/catalog/opencart-logo.png" title="C?a h?ng OpenCart Vi?t Nam" alt="C?a h?ng OpenCart Vi?t Nam" class="img-fluid"/></a>
+                          </div>
+          </div>
+          <div class="col-md-5"><form action="http://localhost:7777/opencart/upload/index.php?route=common/search.redirect&amp;language=vi-vn" method="post" class="input-group mb-3">
+	<input type="text" name="search" value="" placeholder="Tìm kiếm" class="form-control form-control-lg"/>
+	<button type="submit" class="btn btn-light btn-lg"><i class="fa-solid fa-magnifying-glass"></i></button>
+</form>
+</div>
+          <div id="cart" class="col-md-4 col-lg-3 mb-2"><div class="dropdown d-grid">
+  <button type="button" data-bs-toggle="dropdown" class="btn btn-lg btn-dark d-block dropdown-toggle"><i class="fa-solid fa-cart-shopping"></i> 0 sản phẩm - VND</button>
+  <ul class="dropdown-menu dropdown-menu-end p-2">
+          <li class="text-center p-4">Your shopping cart is empty!</li>
+      </ul>
+</div></div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow-1 mb-4">
+        <div class="container">
+    <nav id="menu" class="navbar navbar-expand-lg bg-primary">
+      <div id="category" class="d-block d-sm-block d-lg-none">Categories</div>
+      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu" class="navbar-toggler d-lg-none"><i class="fa-solid fa-bars"></i></button>
+      <div id="navbar-menu" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+                                                                                                              <li class="nav-item dropdown"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=20" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Máy tính để bàn</a>
+                <div class="dropdown-menu dropdown-column-1">
+                  <div class="dropdown-inner">
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=20_26" class="dropdown-item">PC (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=20_27" class="dropdown-item">Mac (1)</a></li>
+                                              </ul>
+                                      </div>
+                  <ul class="list-unstyled">
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=20" class="dropdown-item">Show All Máy tính để bàn</a></li>
+                  </ul>
+                </div>
+              </li>
+                                                                                                                          <li class="nav-item dropdown"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=18" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Laptop & Máy tính xách tay</a>
+                <div class="dropdown-menu dropdown-column-1">
+                  <div class="dropdown-inner">
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=18_46" class="dropdown-item">Macs (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=18_45" class="dropdown-item">Windows (0)</a></li>
+                                              </ul>
+                                      </div>
+                  <ul class="list-unstyled">
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=18" class="dropdown-item">Show All Laptop & Máy tính xách tay</a></li>
+                  </ul>
+                </div>
+              </li>
+                                                                                                                          <li class="nav-item dropdown"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Linh kiện máy tính</a>
+                <div class="dropdown-menu dropdown-column-1">
+                  <div class="dropdown-inner">
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25_29" class="dropdown-item">Chuột & Trackball (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25_28" class="dropdown-item">Màn hình máy tính (2)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25_30" class="dropdown-item">Máy in (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25_31" class="dropdown-item">Máy quét (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25_32" class="dropdown-item">Webcam (0)</a></li>
+                                              </ul>
+                                      </div>
+                  <ul class="list-unstyled">
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25" class="dropdown-item">Show All Linh kiện máy tính</a></li>
+                  </ul>
+                </div>
+              </li>
+                                                <li class="nav-item"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=57" class="dropdown-item">Máy tính bảng</a></li>
+                                                <li class="nav-item"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=17" class="dropdown-item">Phần mềm</a></li>
+                                                <li class="nav-item"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24" class="dropdown-item">Điện thoại & PDA</a></li>
+                                                <li class="nav-item"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=33" class="dropdown-item">Máy ảnh</a></li>
+                                                                                                                          <li class="nav-item dropdown"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Máy nghe nhạc MP3</a>
+                <div class="dropdown-menu dropdown-column-4">
+                  <div class="dropdown-inner">
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_43" class="dropdown-item">test 11 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_44" class="dropdown-item">test 12 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_47" class="dropdown-item">test 15 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_48" class="dropdown-item">test 16 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_49" class="dropdown-item">test 17 (0)</a></li>
+                                              </ul>
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_50" class="dropdown-item">test 18 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_51" class="dropdown-item">test 19 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_52" class="dropdown-item">test 20 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_53" class="dropdown-item">test 21 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_54" class="dropdown-item">test 22 (0)</a></li>
+                                              </ul>
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_55" class="dropdown-item">test 23 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_56" class="dropdown-item">test 24 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_38" class="dropdown-item">test 4 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_37" class="dropdown-item">test 5 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_39" class="dropdown-item">test 6 (0)</a></li>
+                                              </ul>
+                                          <ul class="list-unstyled">
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_40" class="dropdown-item">test 7 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_41" class="dropdown-item">test 8 (0)</a></li>
+                                                  <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34_42" class="dropdown-item">test 9 (0)</a></li>
+                                              </ul>
+                                      </div>
+                  <ul class="list-unstyled">
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34" class="dropdown-item">Show All Máy nghe nhạc MP3</a></li>
+                  </ul>
+                </div>
+              </li>
+                              </ul>
+      </div>
+    </nav>
+  </div>
+
+
+<div id="product-category" class="container">
+  <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="http://localhost:7777/opencart/upload/index.php?route=common/home&amp;language=vi-vn">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24">Điện thoại & PDA</a></li>
+      </ul>
+  <div class="row"><aside id="column-left" class="col-3 d-none d-md-block">
+    <div class="list-group mb-3">
+       <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=20" class="list-group-item">Máy tính để bàn (13)</a>
+           <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=18" class="list-group-item">Laptop & Máy tính xách tay (5)</a>
+           <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=25" class="list-group-item">Linh kiện máy tính (2)</a>
+           <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=57" class="list-group-item">Máy tính bảng (1)</a>
+           <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=17" class="list-group-item">Phần mềm (0)</a>
+                <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24" class="list-group-item active">Điện thoại & PDA (3)</a>
+                 <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=33" class="list-group-item">Máy ảnh (2)</a>
+           <a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=34" class="list-group-item">Máy nghe nhạc MP3 (4)</a>
+      </div>
+
+    <div id="carousel-banner-0" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+              <div class="carousel-item active">
+        <div class="row justify-content-center">
+                      <div class="col-12 text-center">
+                              <a href="index.php?route=product/manufacturer.info&amp;manufacturer_id=7"><img src="http://localhost:7777/opencart/upload/image/catalog/demo/compaq_presario.jpg" alt="HP Banner" class="img-fluid"/></a>
+                          </div>
+                  </div>
+      </div>
+            </div>
+  </div>
+<script type="text/javascript"><!--
+$(document).ready(function() {
+    new bootstrap.Carousel(document.querySelector('#carousel-banner-0'), {
+        ride: 'carousel',
+        interval: 5000,
+        wrap: true
+    });
+});
+//--></script>
+
+  </aside>
+
+    <div id="content" class="col">
+      <h1>Điện thoại & PDA</h1>
+              <div class="row">
+                                <div class="col-9">Điện thoại thông minh và thiết bị PDA</div>
+                  </div>
+        <hr/>
+      
+      
+              <div class="row">
+          <div class="col-lg-3">
+            <div class="mb-3">
+              <a href="http://localhost:7777/opencart/upload/index.php?route=product/compare&amp;language=vi-vn" id="compare-total" class="btn btn-primary d-block"><i class="fa-solid fa-arrow-right-arrow-left"></i> <span class="d-none d-xl-inline">So sánh sản phẩm (3)</span></a>
+            </div>
+          </div>
+          <div class="col-lg-1 d-none d-lg-block">
+            <div class="btn-group">
+              <button type="button" id="button-list" class="btn btn-light" data-bs-toggle="tooltip" title="Danh sách"><i class="fa-solid fa-table-list"></i></button>
+              <button type="button" id="button-grid" class="btn btn-light" data-bs-toggle="tooltip" title="Lưới"><i class="fa-solid fa-table-cells"></i></button>
+            </div>
+          </div>
+          <div class="col-lg-4 offset-lg-1 col-6">
+            <div class="input-group mb-3">
+              <label for="input-sort" class="input-group-text">Sắp xếp theo:</label>
+              <select id="input-sort" class="form-select" onchange="location = this.value;">
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=p.sort_order&amp;order=ASC&amp;path=24" selected>Mặc định</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=pd.name&amp;order=ASC&amp;path=24">Tên (A - Z)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=pd.name&amp;order=DESC&amp;path=24">Tên (Z - A)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=p.price&amp;order=ASC&amp;path=24">Giá (Thấp &gt; Cao)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=p.price&amp;order=DESC&amp;path=24">Giá (Cao &gt; Thấp)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=rating&amp;order=DESC&amp;path=24">Đánh giá (Cao nhất)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=rating&amp;order=ASC&amp;path=24">Đánh giá (Thấp nhất)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=p.model&amp;order=ASC&amp;path=24">Kiểu (A - Z)</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;sort=p.model&amp;order=DESC&amp;path=24">Kiểu (Z - A)</option>
+                              </select>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <div class="input-group mb-3">
+              <label for="input-limit" class="input-group-text">Hiển thị:</label>
+              <select id="input-limit" class="form-select" onchange="location = this.value;">
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;limit=10" selected>10</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;limit=25">25</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;limit=50">50</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;limit=75">75</option>
+                                  <option value="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;limit=100">100</option>
+                              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="product-list" class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4">
+                      <div class="col mb-3"><div class="product-thumb">
+  <div class="image"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;product_id=40"><img src="http://localhost:7777/opencart/upload/image/cache/catalog/demo/iphone_1-500x500.jpg" alt="Điện thoại iPhone" title="Điện thoại iPhone" class="img-fluid"/></a></div>
+  <div class="content">
+    <div class="description">
+      <h4><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;product_id=40">Điện thoại iPhone</a></h4>
+      <p>iPhone là một điện thoại di động cách mạng cho phép bạn thực hiện cuộc gọi chỉ bằng cách chạm vào tê..</p>
+              <div class="price">
+                      <span class="price-new"><x-currency code="VND" amount="22000000"></x-currency></span>
+                                <span class="price-tax">Ex Tax: <x-currency code="VND" amount="22000000.0000"></x-currency></span>
+                  </div>
+                </div>
+    <form method="post" data-oc-toggle="ajax" data-oc-load="http://localhost:7777/opencart/upload/index.php?route=common/cart.info&amp;language=vi-vn" data-oc-target="#cart">
+      <div class="button">
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=checkout/cart.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="Mua hàng"><i class="fa-solid fa-shopping-cart"></i></button>
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=account/wishlist.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="Thêm vào DS yêu thích" ><i class="fa-solid fa-heart"></i></button>
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=product/compare.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="So sánh sản phẩm"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+      </div>
+      <input type="hidden" name="product_id" value="40"/> <input type="hidden" name="quantity" value="1"/>
+    </form>
+  </div>
+</div></div>
+                      <div class="col mb-3"><div class="product-thumb">
+  <div class="image"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;product_id=28"><img src="http://localhost:7777/opencart/upload/image/cache/catalog/demo/htc_touch_hd_1-500x500.jpg" alt="HTC Touch HD" title="HTC Touch HD" class="img-fluid"/></a></div>
+  <div class="content">
+    <div class="description">
+      <h4><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;product_id=28">HTC Touch HD</a></h4>
+      <p>HTC Touch HD l?? smartphone cao c???p v???i m??n h??nh c???m ???ng l???n v?? giao di???n TouchFLO 3D..</p>
+              <div class="price">
+                      <span class="price-new"><x-currency code="VND" amount="100"></x-currency></span>
+                                <span class="price-tax">Ex Tax: <x-currency code="VND" amount="100.0000"></x-currency></span>
+                  </div>
+                </div>
+    <form method="post" data-oc-toggle="ajax" data-oc-load="http://localhost:7777/opencart/upload/index.php?route=common/cart.info&amp;language=vi-vn" data-oc-target="#cart">
+      <div class="button">
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=checkout/cart.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="Mua hàng"><i class="fa-solid fa-shopping-cart"></i></button>
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=account/wishlist.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="Thêm vào DS yêu thích" ><i class="fa-solid fa-heart"></i></button>
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=product/compare.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="So sánh sản phẩm"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+      </div>
+      <input type="hidden" name="product_id" value="28"/> <input type="hidden" name="quantity" value="1"/>
+    </form>
+  </div>
+</div></div>
+                      <div class="col mb-3"><div class="product-thumb">
+  <div class="image"><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;product_id=29"><img src="http://localhost:7777/opencart/upload/image/cache/catalog/demo/palm_treo_pro_1-500x500.jpg" alt="Palm Treo Pro" title="Palm Treo Pro" class="img-fluid"/></a></div>
+  <div class="content">
+    <div class="description">
+      <h4><a href="http://localhost:7777/opencart/upload/index.php?route=product/category&amp;language=vi-vn&amp;path=24&amp;product_id=29">Palm Treo Pro</a></h4>
+      <p>Palm Treo Pro l?? smartphone doanh nghi???p v???i b??n ph??m QWERTY ?????y ????? v?? kh??? n??ng k??..</p>
+              <div class="price">
+                      <span class="price-new"><x-currency code="VND" amount="279.99"></x-currency></span>
+                                <span class="price-tax">Ex Tax: <x-currency code="VND" amount="279.9900"></x-currency></span>
+                  </div>
+                </div>
+    <form method="post" data-oc-toggle="ajax" data-oc-load="http://localhost:7777/opencart/upload/index.php?route=common/cart.info&amp;language=vi-vn" data-oc-target="#cart">
+      <div class="button">
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=checkout/cart.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="Mua hàng"><i class="fa-solid fa-shopping-cart"></i></button>
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=account/wishlist.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="Thêm vào DS yêu thích" ><i class="fa-solid fa-heart"></i></button>
+        <button type="submit" formaction="http://localhost:7777/opencart/upload/index.php?route=product/compare.add&amp;language=vi-vn" data-bs-toggle="tooltip" title="So sánh sản phẩm"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+      </div>
+      <input type="hidden" name="product_id" value="29"/> <input type="hidden" name="quantity" value="1"/>
+    </form>
+  </div>
+</div></div>
+                  </div>
+
+        <div class="row">
+          <div class="col-sm-6 text-start"></div>
+          <div class="col-sm-6 text-end">Hiển thị {start} đến {end} trong {total} ({pages} trang)</div>
+        </div>
+                  </div>
+    </div>
+</div>
+</main>
+<footer class="mt-auto">
+  <div class="container">
+    <div class="row">
+              <div class="col-sm-3">
+          <h5>Thông tin</h5>
+          <ul class="list-unstyled">
+                                      <li><a href="http://localhost:7777/opencart/upload/index.php?route=information/information&amp;language=vi-vn&amp;information_id=2">Terms &amp; Conditions</a></li>
+                          <li><a href="http://localhost:7777/opencart/upload/index.php?route=information/information&amp;language=vi-vn&amp;information_id=4">Delivery Information</a></li>
+                          <li><a href="http://localhost:7777/opencart/upload/index.php?route=information/information&amp;language=vi-vn&amp;information_id=1">About Us</a></li>
+                          <li><a href="http://localhost:7777/opencart/upload/index.php?route=information/information&amp;language=vi-vn&amp;information_id=3">Privacy Policy</a></li>
+                      </ul>
+        </div>
+            <div class="col-sm-3">
+        <h5>Chăm sóc khách hàng</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=information/contact&amp;language=vi-vn">Liên hệ</a></li>
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/returns.add&amp;language=vi-vn">Trả hàng</a></li>
+                    <li><a href="http://localhost:7777/opencart/upload/index.php?route=information/sitemap&amp;language=vi-vn">Sơ đồ trang</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Chức năng khác</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/manufacturer&amp;language=vi-vn">Thương hiệu</a></li>
+                      <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/affiliate&amp;language=vi-vn">Đại lý</a></li>
+                    <li><a href="http://localhost:7777/opencart/upload/index.php?route=product/special&amp;language=vi-vn">Khuyến mãi</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Tài khoản của tôi</h5>
+        <ul class="list-unstyled">
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/account&amp;language=vi-vn">Tài khoản của tôi</a></li>
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/order&amp;language=vi-vn">Lịch sử đơn hàng</a></li>
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/wishlist&amp;language=vi-vn">Danh sách yêu thích</a></li>
+          <li><a href="http://localhost:7777/opencart/upload/index.php?route=account/newsletter&amp;language=vi-vn">Thư thông báo</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <p>Việt hóa bởi <a href="http://octheme.com">Octhem</a><br /> C?a h?ng OpenCart Vi?t Nam &copy; 2025</p>
+    <!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+  </div>
+</footer>
+</div> <!-- #container .d-flex //-->
+
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+<script src="./catalog/view/javascript/framework/webcomponent.js" type="module"></script>
+</body></html>
+

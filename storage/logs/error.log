@@ -1,0 +1,4 @@
+2025-09-16 08:55:20 - Failed to write cache file "D:/xampp/htdocs/opencart/storage/cache/template/bf/bfe64a0b708ee8fc88b2e1e967ed96cb.php". in D:\xampp\htdocs\opencart\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
+2025-09-17 16:28:36 - Undefined array key "VND" in D:\xampp\htdocs\opencart\upload\catalog\controller\common\currency.php on line 38
+2025-09-17 16:38:11 - 4 arguments are required, 3 given in D:\xampp\htdocs\opencart\upload\catalog\controller\account\register.php on line 104
+2025-09-17 16:38:21 - 4 arguments are required, 3 given in D:\xampp\htdocs\opencart\upload\catalog\controller\account\register.php on line 104

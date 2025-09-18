@@ -1,0 +1,100 @@
+# Config and Htaccess Files
+/upload/.htaccess
+/upload/config.php
+/upload/admin/config.php
+
+# Install Files
+/upload/install.lock
+
+# Catalog JSON Files
+/upload/catalog/view/data/*
+!/upload/catalog/view/data/index.html
+
+# Catalog HTML Files
+/upload/catalog/view/html/*
+!/upload/catalog/view/html/index.html
+
+# Image Cache Files
+/upload/image/cache/*
+!/upload/image/cache/index.html
+
+# Backup Files
+/upload/system/storage/backup/*
+!/upload/system/storage/backup/index.html
+
+# System Cache Files
+/upload/system/storage/cache/*
+!/upload/system/storage/cache/index.html
+
+# Download Files
+/upload/system/storage/download/*
+!/upload/system/storage/download/index.html
+
+# Log Files
+/upload/system/storage/logs/*
+!/upload/system/storage/logs/index.html
+
+# Marketplace Files
+# /upload/system/storage/marketplace/*
+# !/upload/system/storage/marketplace/index.html
+
+# Session Files
+/upload/system/storage/session/*
+!/upload/system/storage/session/index.html
+
+# Upload Files
+/upload/system/storage/upload/*
+!/upload/system/storage/upload/index.html
+
+# CSS Files
+/upload/catalog/view/stylesheet/stylesheet.css
+
+# IDE Project files
+/upload/.idea/*
+/.idea/*
+/.DS_Store
+/.cache
+/.php-cs-fixer.cache
+
+# ENV
+.env
+.env.docker
+
+# Test and debug files
+/upload/test_*.php
+/upload/check_*.php
+/upload/debug_*.php
+/upload/fix_*.php
+/upload/localisation_summary.php
+/upload/final_test_*.php
+/upload/**/debug_*.php
+
+# Temporary documentation files
+*_PROJECT.md
+DOC_*.md
+TEMP_*.md
+CHECKLIST_*.md
+FINAL_*.md
+*_REFERENCE.csv
+*_TEMPLATE.csv
+*_GUIDE.md
+*IMPORT*.md
+*IMPORT*.csv
+
+# Backup and copy files
+*.bak
+*.backup
+*_copy.*
+*_backup.*
+
+# SQL scripts and temporary files
+temp.sql
+fix-*.sql
+translate-*.sql
+update_*.sql
+*_FIX_*.sql
+
+# Compilation and utility scripts
+compile-*.bat
+compile-*.sh
+fix-*.ps1
