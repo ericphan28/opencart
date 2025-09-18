@@ -1,0 +1,256 @@
+{{ header }}{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="button" id="test-connection" class="btn btn-info">
+          <i class="fa fa-plug"></i> Kiểm Tra Kết Nối Sapo
+        </button>
+      </div>
+      <h1>🌱 An Nhiên Farm - Đồng Bộ Sapo</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% if not sapo_configured %}
+    <div class="alert alert-warning">
+      <i class="fa fa-exclamation-triangle"></i>
+      <strong>Cảnh báo!</strong> Sapo API chưa được cấu hình. 
+      <a href="{{ config_link }}">Vui lòng cấu hình Sapo API</a> trước khi sử dụng.
+    </div>
+    {% endif %}
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <i class="fa fa-refresh"></i> Đồng Bộ Dữ Liệu An Nhiên Farm
+        </h3>
+      </div>
+      <div class="panel-body">
+        
+        <!-- Sync Products -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="panel panel-success">
+              <div class="panel-heading">
+                <h4><i class="fa fa-leaf"></i> Sản Phẩm Nông Sản</h4>
+              </div>
+              <div class="panel-body">
+                <p>Đồng bộ sản phẩm từ Sapo về OpenCart</p>
+                <ul class="list-unstyled">
+                  <li>🥬 Rau xanh tươi</li>
+                  <li>🥕 Củ quả tươi</li>
+                  <li>🍎 Trái cây tươi</li>
+                  <li>🌿 Thảo mộc & gia vị</li>
+                  <li>🥩 Thịt bò nhập khẩu</li>
+                  <li>🦐 Hải sản đông lạnh</li>
+                  <li>🍯 Nước sốt tiện lợi</li>
+                </ul>
+                <button type="button" id="sync-products" class="btn btn-success btn-block">
+                  <i class="fa fa-download"></i> Đồng Bộ Sản Phẩm
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sync Orders -->
+          <div class="col-md-4">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                <h4><i class="fa fa-shopping-cart"></i> Đơn Hàng</h4>
+              </div>
+              <div class="panel-body">
+                <p>Đồng bộ đơn hàng từ OpenCart lên Sapo</p>
+                <ul class="list-unstyled">
+                  <li>📦 Đơn hàng mới</li>
+                  <li>💰 Thông tin thanh toán</li>
+                  <li>🚚 Địa chỉ giao hàng</li>
+                  <li>📞 Thông tin liên hệ</li>
+                  <li>📊 Trạng thái đơn hàng</li>
+                </ul>
+                <button type="button" id="sync-orders" class="btn btn-primary btn-block">
+                  <i class="fa fa-upload"></i> Đồng Bộ Đơn Hàng
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sync Customers -->
+          <div class="col-md-4">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h4><i class="fa fa-users"></i> Khách Hàng</h4>
+              </div>
+              <div class="panel-body">
+                <p>Đồng bộ thông tin khách hàng</p>
+                <ul class="list-unstyled">
+                  <li>👤 Thông tin cá nhân</li>
+                  <li>📧 Email liên hệ</li>
+                  <li>📱 Số điện thoại</li>
+                  <li>🏠 Địa chỉ giao hàng</li>
+                  <li>🏷️ Phân loại khách hàng</li>
+                </ul>
+                <button type="button" id="sync-customers" class="btn btn-info btn-block">
+                  <i class="fa fa-upload"></i> Đồng Bộ Khách Hàng
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Sync Status -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4><i class="fa fa-info-circle"></i> Trạng Thái Đồng Bộ</h4>
+              </div>
+              <div class="panel-body">
+                <div id="sync-status">
+                  <p class="text-muted">
+                    <i class="fa fa-info-circle"></i> 
+                    Nhấn "Kiểm Tra Kết Nối Sapo" để kiểm tra kết nối với hệ thống Sapo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Farm Information -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="alert alert-info">
+              <h4><i class="fa fa-leaf"></i> Về An Nhiên Farm</h4>
+              <p>
+                <strong>An Nhiên Farm</strong> chuyên cung cấp đa dạng thực phẩm chất lượng cao: 
+                nông sản sạch từ nông trại, thịt bò nhập khẩu cao cấp, hải sản đông lạnh tươi ngon và các loại nước sốt tiện lợi. 
+                Hệ thống đồng bộ này giúp kết nối dữ liệu giữa website bán hàng và hệ thống quản lý Sapo POS.
+              </p>
+              <ul class="list-inline">
+                <li><strong>🌱 Nông sản hữu cơ</strong></li>
+                <li><strong>🥩 Thịt bò nhập khẩu</strong></li>
+                <li><strong>🦐 Hải sản cao cấp</strong></li>
+                <li><strong>🍯 Nước sốt tiện lợi</strong></li>
+                <li><strong>🚚 Giao hàng tận nơi</strong></li>
+                <li><strong>📱 Quản lý hiện đại</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // Test Sapo Connection
+    $('#test-connection').on('click', function() {
+        var button = $(this);
+        button.prop('disabled', true);
+        button.html('<i class="fa fa-spinner fa-spin"></i> Đang kiểm tra...');
+        
+        $.ajax({
+            url: '{{ test_connection }}',
+            type: 'POST',
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    $('#sync-status').html(
+                        '<div class="alert alert-success">' +
+                        '<i class="fa fa-check"></i> ' + response.success +
+                        '</div>'
+                    );
+                } else if (response.error) {
+                    $('#sync-status').html(
+                        '<div class="alert alert-danger">' +
+                        '<i class="fa fa-times"></i> ' + response.error +
+                        '</div>'
+                    );
+                }
+            },
+            error: function() {
+                $('#sync-status').html(
+                    '<div class="alert alert-danger">' +
+                    '<i class="fa fa-times"></i> Lỗi kết nối đến server' +
+                    '</div>'
+                );
+            },
+            complete: function() {
+                button.prop('disabled', false);
+                button.html('<i class="fa fa-plug"></i> Kiểm Tra Kết Nối Sapo');
+            }
+        });
+    });
+    
+    // Sync Products
+    $('#sync-products').on('click', function() {
+        performSync($(this), '{{ sync_products }}', 'Đang đồng bộ sản phẩm...', '<i class="fa fa-download"></i> Đồng Bộ Sản Phẩm');
+    });
+    
+    // Sync Orders
+    $('#sync-orders').on('click', function() {
+        performSync($(this), '{{ sync_orders }}', 'Đang đồng bộ đơn hàng...', '<i class="fa fa-upload"></i> Đồng Bộ Đơn Hàng');
+    });
+    
+    // Sync Customers
+    $('#sync-customers').on('click', function() {
+        performSync($(this), '{{ sync_customers }}', 'Đang đồng bộ khách hàng...', '<i class="fa fa-upload"></i> Đồng Bộ Khách Hàng');
+    });
+    
+    function performSync(button, url, loadingText, originalText) {
+        button.prop('disabled', true);
+        button.html('<i class="fa fa-spinner fa-spin"></i> ' + loadingText);
+        
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            success: function(response) {
+                var alertClass = 'alert-success';
+                var icon = 'fa-check';
+                var message = response.success;
+                
+                if (response.error) {
+                    alertClass = 'alert-danger';
+                    icon = 'fa-times';
+                    message = response.error;
+                } else if (response.warnings) {
+                    alertClass = 'alert-warning';
+                    icon = 'fa-exclamation-triangle';
+                    message += '<br><br><strong>Cảnh báo:</strong><ul>';
+                    for (var i = 0; i < response.warnings.length; i++) {
+                        message += '<li>' + response.warnings[i] + '</li>';
+                    }
+                    message += '</ul>';
+                }
+                
+                $('#sync-status').html(
+                    '<div class="alert ' + alertClass + '">' +
+                    '<i class="fa ' + icon + '"></i> ' + message +
+                    '</div>'
+                );
+            },
+            error: function() {
+                $('#sync-status').html(
+                    '<div class="alert alert-danger">' +
+                    '<i class="fa fa-times"></i> Lỗi kết nối đến server' +
+                    '</div>'
+                );
+            },
+            complete: function() {
+                button.prop('disabled', false);
+                button.html(originalText);
+            }
+        });
+    }
+});
+</script>
+
+{{ footer }}

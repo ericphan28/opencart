@@ -1,15 +1,19 @@
-# 🛒 OpenCart Vietnamese E-commerce Platform
+# 🌱 An Nhiên Farm - Vietnamese OpenCart E-commerce Platform
 
-> Vietnamese localized version of OpenCart 4.1.0.4 - Complete e-commerce solution
+> Nông sản sạch An Nhiên Farm - Vietnamese localized OpenCart 4.1.0.4 with Sapo POS integration
 
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%208.0-8892BF.svg?style=flat-square)](https://php.net/)
 [![OpenCart Version](https://img.shields.io/badge/OpenCart-4.1.0.4-brightgreen.svg)](https://github.com/opencart/opencart)
-[![Vietnamese Support](https://img.shields.io/badge/Language-Vietnamese-red.svg)](https://github.com/thangphan28/opencart)
+[![Vietnamese Support](https://img.shields.io/badge/Language-Vietnamese-red.svg)](https://github.com/ericphan28/opencart)
+[![Sapo Integration](https://img.shields.io/badge/POS-Sapo%20Integrated-blue.svg)](https://sapo.vn)
 
 ## ✨ Features
 
-- 🇻🇳 **Full Vietnamese localization** - Complete admin and frontend translation
+- � **An Nhiên Farm Branding** - Complete farm business customization
+- �🇻🇳 **Full Vietnamese localization** - Complete admin and frontend translation
 - 💰 **Vietnamese Dong (VND) support** - Native currency formatting
+- 🔄 **Sapo POS Integration** - Real-time sync with Sapo point-of-sale system
+- 📦 **Farm Product Categories** - Vegetables, fruits, herbs, processed products
 - 🌍 **Multi-language ready** - Easy switch between Vietnamese and English
 - 📱 **Responsive design** - Mobile-friendly interface
 - 🛡️ **Secure platform** - Built on OpenCart's proven foundation
